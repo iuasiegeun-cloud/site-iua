@@ -53,10 +53,6 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 text-xs text-navy-400">
           <p>Copyright © {new Date().getFullYear()} Institut Universitaire d'Abidjan. Tous droits réservés.</p>
           <div className="flex items-center gap-4">
-            <a href="#confidentialite" className="hover:text-gold-400 transition-colors">
-
-              Politique king elysee
-            </a>
             <a href="#conditions" className="hover:text-gold-400 transition-colors">
               Conditions d'utilisation
             </a>
