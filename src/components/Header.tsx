@@ -138,7 +138,7 @@ export default function Header() {
           href: '/vie-campus',
           children: [
             { label: 'About IUA', href: '/a-propos' },
-            { label: 'Libraries (Physical & Digital)', href: '/bibliotheque' },
+
             { label: 'Resources & E-Learning', href: '/ressources' },
             { label: 'Alumni Testimonials', href: '/temoignages' },
             { label: 'Student Handbook', href: '/guide-etudiant' },
@@ -191,7 +191,7 @@ export default function Header() {
           href: '/vie-campus',
           children: [
             { label: 'Acerca de la IUA', href: '/a-propos' },
-            { label: 'Bibliotecas (Física y Digital)', href: '/bibliotheque' },
+
             { label: 'Recursos y E-Learning', href: '/ressources' },
             { label: 'Testimonios', href: '/temoignages' },
             { label: 'Guía del Estudiante', href: '/guide-etudiant' },

@@ -10,7 +10,7 @@ export default function Footer() {
       return {
         'Study at IUA': [
           { label: 'About IUA', href: '/a-propos' },
-          { label: 'University Library', href: '/bibliotheque' },
+
           { label: 'Resources & E-Learning', href: '/ressources' },
           { label: 'Admissions & Tuition', href: '/admissions' },
           { label: 'Career & Placement (BAIP)', href: '/insertion-professionnelle' },
@@ -35,7 +35,7 @@ export default function Footer() {
       return {
         'Estudiar en la IUA': [
           { label: 'Acerca de la IUA', href: '/a-propos' },
-          { label: 'Biblioteca Universitaria', href: '/bibliotheque' },
+
           { label: 'Recursos y E-Learning', href: '/ressources' },
           { label: 'Admisiones y Costos', href: '/admissions' },
           { label: 'Inserción Profesional', href: '/insertion-professionnelle' },

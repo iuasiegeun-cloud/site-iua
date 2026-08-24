@@ -98,10 +98,6 @@ export const topNav = [
         href: '/a-propos',
       },
 
-      {
-        label: 'Bibliothèque',
-        href: '/bibliotheque',
-      },
 
       {
         label: 'Ressources',
@@ -232,10 +228,6 @@ export const mainNav = [
         href: '/a-propos',
       },
 
-      {
-        label: 'Bibliothèques (Physique & Numérique)',
-        href: '/bibliotheque',
-      },
 
       {
         label: 'Ressources',
@@ -544,10 +536,6 @@ export const footerLinks = {
       href: '/a-propos',
     },
 
-    {
-      label: 'Bibliothèque Universitaire',
-      href: '/bibliotheque',
-    },
 
     {
       label: 'Ressources',
