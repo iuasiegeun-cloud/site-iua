@@ -11,6 +11,8 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import ConnexionPage from './components/ConnexionPage'
 
+import EspaceUtilisateur from "./components/EspaceUtilisateur";
+
 
 // ============================================================
 // PAGE D'ACCUEIL
@@ -19,6 +21,7 @@ import ConnexionPage from './components/ConnexionPage'
 function Home() {
   return (
     <>
+      <Header />
       <Hero />
       <Stats />
       <NewsAndLinks />
@@ -71,12 +74,6 @@ function App() {
       <div className="min-h-screen bg-white">
 
         {/* ==================================================
-            HEADER GLOBAL
-        ================================================== */}
-
-        <Header />
-
-        {/* ==================================================
             ROUTES
         ================================================== */}
 
@@ -89,6 +86,21 @@ function App() {
           <Route
             path="/"
             element={<Home />}
+          />
+
+
+          {/* ==================================================
+              CONNEXION / ESPACE UTILISATEUR
+          ================================================== */}
+
+          <Route
+            path="/connexion"
+            element={<ConnexionPage />}
+          />
+
+          <Route
+            path="/espace-utilisateur"
+            element={<EspaceUtilisateur />}
           />
 
 
@@ -338,22 +350,6 @@ function App() {
 
 
           {/* ==================================================
-              CONNEXION
-          ================================================== */}
-
-          <Route
-            path="/connexion"
-            element={<ConnexionPage />}
-          />
-
-          {/* Compatibilité avec ton ancienne URL */}
-          <Route
-            path="/ConnexionPage"
-            element={<ConnexionPage />}
-          />
-
-
-          {/* ==================================================
               404
           ================================================== */}
 
@@ -362,7 +358,7 @@ function App() {
             element={
               <Page
                 title="Page introuvable"
-                description="La page que vous recherchez n'existe pas."
+                description="La page que vous recherchez n'existe pas ou a été déplacée."
               />
             }
           />

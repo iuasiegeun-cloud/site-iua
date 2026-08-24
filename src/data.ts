@@ -590,7 +590,7 @@ export const accountPortals = [
     desc:
       'Notes, emploi du temps, documents administratifs',
 
-    href: '/ConnexionPage',
+    href: '/connexion',
 
     icon: 'graduation',
   },
@@ -601,7 +601,7 @@ export const accountPortals = [
     desc:
       'Cours, absences, saisie des notes',
 
-    href: '/ConnexionPage',
+    href: '/connexion',
 
     icon: 'people',
   },
@@ -612,7 +612,7 @@ export const accountPortals = [
     desc:
       'Gestion académique et administrative',
 
-    href: '/ConnexionPage',
+    href: '/connexion',
 
     icon: 'building',
   },
