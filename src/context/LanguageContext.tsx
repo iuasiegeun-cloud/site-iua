@@ -45,7 +45,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Search Modal
     'search.title': 'Recherche sur le site IUA',
-    'search.placeholder': 'Tapez un mot-clé (ex: Génie Informatique, MIAGE, Droit, Bibliothèque, Visa, Frais)...',
+    'search.placeholder': 'Rechercher sur le site...',
     'search.all_categories': 'Toutes les catégories',
     'search.formations': 'Formations & Diplômes',
     'search.campus': 'Vie de campus & Services',
@@ -97,7 +97,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Search Modal
     'search.title': 'Search IUA Website',
-    'search.placeholder': 'Type keywords (e.g., Computer Science, MIAGE, Law, Library, Visa, Tuition)...',
+    'search.placeholder': 'Search the website...',
     'search.all_categories': 'All Categories',
     'search.formations': 'Programs & Degrees',
     'search.campus': 'Campus Life & Services',
@@ -149,7 +149,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Search Modal
     'search.title': 'Buscar en el sitio web de la IUA',
-    'search.placeholder': 'Escriba palabras clave (ej: Informática, MIAGE, Derecho, Biblioteca, Visa)...',
+    'search.placeholder': 'Buscar en el sitio...',
     'search.all_categories': 'Todas las categorías',
     'search.formations': 'Programas y Títulos',
     'search.campus': 'Vida en el Campus',
@@ -182,6 +182,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const setLang = (newLang: Language) => {
     setLangState(newLang)
     localStorage.setItem('iua_lang', newLang)
+    
+    // Google Translate trigger
+    const gtMap: Record<Language, string> = {
+      FR: '/fr/fr',
+      EN: '/fr/en',
+      ESP: '/fr/es',
+    }
+    document.cookie = `googtrans=${gtMap[newLang]}; path=/; domain=${window.location.hostname}`;
+    document.cookie = `googtrans=${gtMap[newLang]}; path=/;`;
+    window.location.reload();
   }
 
   const t = (key: string): string => {

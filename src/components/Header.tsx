@@ -266,7 +266,7 @@ export default function Header() {
               {/* Barre de Recherche Globale interactive */}
               <div
                 onClick={() => setSearchModalOpen(true)}
-                className="flex items-center gap-2 border border-navy-200 hover:border-gold-500 rounded-lg px-3 py-1 bg-gray-50 hover:bg-white transition-all cursor-pointer shadow-2xs"
+                className="flex items-center gap-2 border border-navy-200 hover:border-navy-500 rounded-lg px-3 py-1 bg-gray-50 hover:bg-white transition-all cursor-pointer shadow-2xs"
               >
                 <Search size={13} className="text-navy-500" />
                 <span className="text-xs text-navy-400 select-none">
@@ -443,7 +443,7 @@ export default function Header() {
             }}
             className="flex items-center gap-3 border border-navy-200 rounded-xl px-4 py-3 bg-gray-50 mb-6 cursor-pointer"
           >
-            <Search size={18} className="text-gold-500" />
+            <Search size={18} className="text-navy-900" />
             <span className="text-sm text-navy-500 font-medium">
               {t('nav.search_placeholder')}
             </span>
