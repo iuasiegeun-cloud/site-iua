@@ -2,7 +2,7 @@ export const faculties = [
   {
     name: 'Faculté des Sciences et Technologies',
     slug: 'sciences-technologies',
-    desc: 'Informatique, génie civil, génie électrique, mathématiques appliquées.',
+    desc: 'Génie Informatique, MIAGE, Big Data & Intelligence Artificielle, Cybersécurité.',
   },
   {
     name: 'Faculté de Droit et Science Politique',
@@ -97,6 +97,7 @@ export const topNav = [
         label: 'À propos',
         href: '/a-propos',
       },
+
 
       {
         label: 'Ressources',
@@ -227,6 +228,7 @@ export const mainNav = [
         href: '/a-propos',
       },
 
+
       {
         label: 'Ressources',
         href: '/ressources',
@@ -238,8 +240,8 @@ export const mainNav = [
       },
 
       {
-        label: 'Insertion professionnelle',
-        href: '/insertion-professionnelle',
+        label: 'Guide de l’étudiant',
+        href: '/guide-etudiant',
       },
     ],
   },
@@ -533,6 +535,7 @@ export const footerLinks = {
       label: 'À propos',
       href: '/a-propos',
     },
+
 
     {
       label: 'Ressources',
