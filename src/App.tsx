@@ -95,13 +95,13 @@ function NotFoundPage() {
 
 function Layout() {
   const location = useLocation()
-  const isAuthRoute = location.pathname === '/connexion'
+  const hideLayout = ['/connexion', '/espace-utilisateur'].includes(location.pathname)
 
   return (
     <div className="min-h-screen bg-white flex flex-col justify-between">
       <ScrollToTop />
 
-      {!isAuthRoute && <Header />}
+      {!hideLayout && <Header />}
 
       <div className="flex-1">
         <Routes>
@@ -149,7 +149,7 @@ function Layout() {
         </Routes>
       </div>
 
-      {!isAuthRoute && <Footer />}
+      {!hideLayout && <Footer />}
       <BackToTop />
     </div>
   )
