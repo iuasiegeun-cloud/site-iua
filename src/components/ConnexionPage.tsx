@@ -1,20 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { User, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { getLoginUrl } from "../lib/api";
 
 const PHOTO_SRC = "/assets/amphi-2.jpg";
 
 export default function ConnexionPage() {
   const navigate = useNavigate();
 
-  // Démo Microsoft
+  // Redirige vers le backend, qui redirige à son tour vers la page de
+  // connexion Microsoft Entra ID (voir GET /api/auth/login côté backend).
+  // Ce n'est PAS un appel fetch : c'est une navigation complète de page,
+  // car l'authentification Microsoft nécessite un cycle de redirections.
   const handleMicrosoftLogin = () => {
-    // Simulation de l'authentification Microsoft
-    navigate("/espace-utilisateur");
-  };
-
-  // Démo connexion classique
-  const handleClassicLogin = () => {
-    navigate("/espace-utilisateur");
+    window.location.href = getLoginUrl();
   };
 
   return (
@@ -66,7 +64,7 @@ export default function ConnexionPage() {
               Accédez à votre espace utilisateur
             </p>
 
-            {/* MICROSOFT */}
+            {/* MICROSOFT — authentification unifiée Entra ID (§4.3 du CDC) */}
             <button
               type="button"
               onClick={handleMicrosoftLogin}
@@ -101,42 +99,13 @@ export default function ConnexionPage() {
               <span>Continuer avec Microsoft</span>
             </button>
 
-            {/* SÉPARATEUR */}
-            <div className="flex items-center gap-4 my-7">
-              <div className="h-px bg-gray-200 flex-1" />
-              <span className="text-xs text-gray-400">OU</span>
-              <div className="h-px bg-gray-200 flex-1" />
-            </div>
-
-            {/* CONNEXION CLASSIQUE */}
-            <button
-              type="button"
-              onClick={handleClassicLogin}
-              className="
-                w-full
-                flex
-                items-center
-                justify-center
-                gap-2
-                bg-navy-900
-                text-white
-                rounded-lg
-                px-5
-                py-3
-                font-medium
-                hover:bg-navy-800
-                transition-all
-                duration-200
-              "
-            >
-              <User size={18} />
-              Connexion classique
-            </button>
-
-            {/* TEXTE */}
+            {/* TEXTE — tous les comptes (admin, personnel, étudiants) passent
+                désormais uniquement par Microsoft Entra ID, il n'y a plus
+                d'identifiants "classiques" IUA (voir §1 du CDC). */}
             <p className="text-xs text-center text-gray-400 mt-6">
-              Utilisez votre compte Microsoft ou vos identifiants
-              IUA pour accéder à votre espace.
+              Utilisez votre compte Microsoft (nom.prenom@iua.ci) pour accéder
+              à votre espace. L'authentification est entièrement gérée par
+              Microsoft — l'IUA ne stocke aucun mot de passe.
             </p>
 
           </div>

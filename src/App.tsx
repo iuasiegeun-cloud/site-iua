@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
+import { AuthProvider } from './context/AuthContext'
 
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -161,9 +162,11 @@ function Layout() {
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Layout />
+        </BrowserRouter>
+      </AuthProvider>
     </LanguageProvider>
   )
 }
